@@ -13,6 +13,7 @@ mongoose.connect(process.env.MONGODB, {useNewUrlParser: true});
 var share = {mongoose, ews}
 
 app.use('/chat', require('./lib/chat')(share)); // /chat WS endpoint
+app.use('/auth', require('./lib/auth')(share)); // auth api
 
 app.get('/', function serveIndex(req, res) {
 	res.send("<h1>You're lost.</h1><p>Hey! This is a Signal server's address. You're probably looking to go <a href=\"https://signal.skiilaa.me/game?host=todo\">here</a>.</p>"); // TO-DO: put server address into host query param so the client knows where to point
