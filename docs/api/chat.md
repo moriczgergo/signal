@@ -32,6 +32,7 @@ Example `hello` message:
 A `hello` message should be sent by the client upon connecting, and confirms that the client understood the server message. If a `hello` message isn't sent by the server, an auth token should not be sent to the server, because the token may be leaked to other servers by the client this way.
 
 **Parameters**:
+
 |Key|Description|Example|Flags
 |-|-|-|-
 |`token`|A 32 characters long, `/^[A-Za-z0-9-_]+$/` matching authentication token received from the [Login API](login.md).|`"iRHZ7-9HSGYaxVMB2I5yUCCXRA_7SWWX"`|required, string
@@ -49,6 +50,7 @@ A `hello` message should be sent by the client upon connecting, and confirms tha
 An `msg` message is sent out by the server if another client sent a chat message that this client should be a recipient of. Only authenticated clients can receive `msg` messages. Clients should not send `msg` typed messages.
 
 **Parameters**:
+
 |Key|Description|Example|Flags
 |-|-|-|-
 |`author`|The *user* that is sending this message.|`"bob"`|string
