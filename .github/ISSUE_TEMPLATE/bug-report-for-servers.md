@@ -2,7 +2,7 @@
 name: Bug report for Servers
 about: Create a report to help us improve
 title: ''
-labels: ''
+labels: bug
 assignees: ''
 
 ---

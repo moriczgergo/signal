@@ -2,7 +2,7 @@
 name: Sandbox issue report
 about: Create a report to help the game
 title: ''
-labels: ''
+labels: bug, sandbox
 assignees: moriczgergo
 
 ---
