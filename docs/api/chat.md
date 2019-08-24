@@ -63,30 +63,6 @@ An `msg` message is sent out by the server if another client sent a chat message
 
 A `send` message is sent out by the client if the player wants to send a chat message. Only authenticated clients can send `send` messages, if an anonymous one tries to, the message will produce [error 3](#error-codes). Servers will not send `send` typed messages.
 
-**Example `send` messages**:
-
-Message from channel:
-```json
-{
-    "author": "bob",
-    "private": false,
-    "channel": "general",
-    "content": "Hello, world!",
-    "timestamp": 1566660330411
-}
-```
-
-Message from private:
-```json
-{
-    "author": "bob",
-    "private": true,
-    "channel": "alice",
-    "content": "Hello, world!",
-    "timestamp": 1566660330411
-}
-```
-
 **Parameters**:
 
 |Key|Description|Example|Flags
