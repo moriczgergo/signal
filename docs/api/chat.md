@@ -86,6 +86,7 @@ Message from private:
 ```
 
 **Parameters**:
+
 |Key|Description|Example|Flags
 |-|-|-|-
 |`author`|The *user* that is sending this message. (If the specified user does not belong to the account belonging to the auth token, this message will produce [error 5](#error-codes))|`"alice"`|required, string

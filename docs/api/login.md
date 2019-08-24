@@ -19,6 +19,7 @@ When sending a POST request to an endpoint, the POST data should always be JSON 
 The `register.json` endpoint should be called via a POST request. The `register.json` endpoint is used to create a new account on the server. The `register.json` endpoint may need a reCAPTCHA v2 button widget response, but this depends on the server configuration ([see recaptcha.json](#recaptchajson)).
 
 **Parameters**:
+
 |Key|Description|Example|Flags
 |-|-|-|-
 |`username`|The desired username to register as. (must match `/^[a-zA-Z0-9_-]+$/`, be at least 1 character long, but max. 32 characters long. if doesn't match requirements, call will produce [error 5](#error-codes)|`"alice"`|required, string
@@ -61,12 +62,14 @@ The `register.json` endpoint should be called via a POST request. The `register.
 The `login.json` endpoint should be called via a POST request. The `login.json` endpoint is used to create an authentication token on the server.
 
 **Parameters**:
+
 |Key|Description|Example|Flags
 |-|-|-|-
 |`username`|The desired username to register as. (if the username doesn't exist in the database, the call will produce [error 3](#error-codes-1))|`"alice"`|required, string
 |`password`|The desired password to use. (if the password is incorrect, the call will produce [error 4](#error-codes-1))|`"dontusethispasswordplease"`|required, string
 
 **Response body**:
+
 |Key|Description|Example|Flags
 |-|-|-|-
 |`token`|A 32 characters long, `/^[A-Za-z0-9-_]+$/` matching authentication token.|`"iRHZ7-9HSGYaxVMB2I5yUCCXRA_7SWWX"`|string
@@ -109,7 +112,7 @@ The `recaptcha.json` endpoint should be called via a GET request. The `recaptcha
 **reCAPTCHA enabled response** (status code 200):
 ```json
 {
-    site_key: "<SITE_KEY>"
+    "site_key": "<SITE_KEY>"
 }
 ```
 
