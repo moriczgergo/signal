@@ -6,6 +6,20 @@ To use the Game API, you will need to get a token from the [Login API](login.md)
 
 The Game API endpoint is `/game`. Clients should connect to endpoint via Websocket. [Example auth flow available.](#examples)
 
+## Message Types
+
+### hello
+
+Hello message from server.
+
+### acct.auth
+
+Authentication message.
+
+### acct.data
+
+Account data message.
+
 ## Examples
 
 Here's an example authentication flow between the server and client.
